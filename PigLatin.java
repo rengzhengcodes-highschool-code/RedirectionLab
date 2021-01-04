@@ -15,11 +15,15 @@ public class PigLatin {
 		String firstLetter = s.substring(0, 1);
 		boolean firstLetterIsVowel = inArray(firstLetter, vowels);
 
-		if (firstLetterIsVowel) {
+		String output;
 
+		if (firstLetterIsVowel) {
+			output = s + "hay";
+		} else {
+			output = s.substring(1, s.length()) + s.charAt(0) + "ay";
 		}
 
-		return "";
+		return output;
 	}
 
 }
