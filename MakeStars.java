@@ -7,8 +7,7 @@ public class MakeStars {
 		String print = "";
 
 		while (input.hasNextLine()) {
-			System.out.println(input.nextLine());
-			/*Scanner line = new Scanner(input.nextLine());
+			Scanner line = new Scanner(input.nextLine());
 
 			while(line.hasNext()) {
 				int charCount = line.next().length();
@@ -23,10 +22,10 @@ public class MakeStars {
 
 			if (input.hasNextLine()) {
 				print += "\n";
-			}*/
+			}
 		}
 
-		//System.out.println(print);
+		System.out.println(print);
 	}
 
 }
