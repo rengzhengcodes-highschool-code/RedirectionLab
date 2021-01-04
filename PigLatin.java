@@ -1,5 +1,6 @@
 public class PigLatin {
 	private static String[] vowels = {"a", "e", "i", "o", "u"};
+	private static String[] diagraphs = {"bl", "br", "ch", "ck", "cl", "cr", "dr", "fl", "fr", "gh", "gl", "gr", "ng", "ph", "pl", "pr", "qu", "sc", "sh", "sk", "sl", "sm", "sn", "sp", "st", "sw", "th", "tr", "tw", "wh", "wr"};
 
 	private static boolean inArray(Object element, Object[] array) {
 		for (Object e : array) {
@@ -23,7 +24,7 @@ public class PigLatin {
 			output = s.substring(1, s.length()) + s.charAt(0) + "ay";
 		}
 
-		return output;
+		return output.toLowerCase();
 	}
 
 }
