@@ -15,6 +15,8 @@ public class PigLatinTester extends PigLatin {
 		System.out.println(pigLatin("skee"));
 		System.out.println(pigLatin("emu"));
 		System.out.println(pigLatin("grade"));
+		System.out.println(pigLatin("a"));
+		System.out.println(pigLatin("t"));
 	}
 
 }
