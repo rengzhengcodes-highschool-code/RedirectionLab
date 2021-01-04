@@ -27,4 +27,23 @@ public class PigLatin {
 		return output.toLowerCase();
 	}
 
+	public static String pigLatin (String s) {
+		boolean isDigraph;
+		try {
+			isDigraph = inArray(s.substring(0, 2), diagraphs);
+		} catch (IndexOutOfBoundsException e) {
+			isDigraph = false;
+		}
+
+		String output;
+
+		if (isDigraph) {
+			output = s.substring(2, s.length()) + s.substring(0, 2) + "ay";
+		} else {
+			output = pigLatinSimple(s);
+		}
+
+		return output.toLowerCase();
+	}
+
 }
