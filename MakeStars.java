@@ -25,7 +25,7 @@ public class MakeStars {
 			}
 		}
 
-		System.out.println(print);
+		System.out.print(print);
 	}
 
 }
