@@ -1,4 +1,31 @@
+import java.util.Scanner;
+
+
 public class PigLatin {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		String print = "";
+
+		while (input.hasNextLine()) {
+			Scanner line = new Scanner(input.nextLine());
+
+			while(line.hasNext()) {
+				print += pigLatinBest(line.next());
+
+				if (line.hasNext()) {
+					print += " ";
+				}
+			}
+
+			if (input.hasNextLine()) {
+				print += "\n";
+			}
+		}
+
+		System.out.print(print);
+	}
+
 	private static String[] vowels = {"a", "e", "i", "o", "u"};
 	private static String[] diagraphs = {"bl", "br", "ch", "ck", "cl", "cr", "dr", "fl", "fr", "gh", "gl", "gr", "ng", "ph", "pl", "pr", "qu", "sc", "sh", "sk", "sl", "sm", "sn", "sp", "st", "sw", "th", "tr", "tw", "wh", "wr"};
 	private static String[] letters = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
