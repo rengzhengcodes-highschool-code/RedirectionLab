@@ -62,7 +62,7 @@ public class PigLatin {
 			if (endsWithLetter) {
 				output = pigLatin(s);
 			} else {
-				output = pigLatin(s.substring(0, s.length())) + s.charAt(s.length() - 1);
+				output = pigLatin(s.substring(0, s.length() - 1)) + s.charAt(s.length() - 1);
 			}
 		}
 
