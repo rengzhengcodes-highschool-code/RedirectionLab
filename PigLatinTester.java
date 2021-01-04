@@ -5,6 +5,8 @@ public class PigLatinTester extends PigLatin {
 		System.out.println(pigLatinSimple("pie"));
 		System.out.println(pigLatinSimple("david"));
 		System.out.println(pigLatinSimple("aaron"));
+		System.out.println(pigLatinSimple("a"));
+		System.out.println(pigLatinSimple("t"));
 	}
 
 }
