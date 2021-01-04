@@ -1,6 +1,7 @@
 public class PigLatin {
 	private static String[] vowels = {"a", "e", "i", "o", "u"};
 	private static String[] diagraphs = {"bl", "br", "ch", "ck", "cl", "cr", "dr", "fl", "fr", "gh", "gl", "gr", "ng", "ph", "pl", "pr", "qu", "sc", "sh", "sk", "sl", "sm", "sn", "sp", "st", "sw", "th", "tr", "tw", "wh", "wr"};
+	private static String[] letters = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
 
 	private static boolean inArray(Object element, Object[] array) {
 		for (Object e : array) {
@@ -13,6 +14,7 @@ public class PigLatin {
 	}
 
 	public static String pigLatinSimple (String s) {
+		s = s.toLowerCase();
 		String firstLetter = s.substring(0, 1);
 		boolean firstLetterIsVowel = inArray(firstLetter, vowels);
 
@@ -24,10 +26,11 @@ public class PigLatin {
 			output = s.substring(1, s.length()) + s.charAt(0) + "ay";
 		}
 
-		return output.toLowerCase();
+		return output;
 	}
 
 	public static String pigLatin (String s) {
+		s = s.toLowerCase();
 		boolean isDigraph;
 		try {
 			isDigraph = inArray(s.substring(0, 2), diagraphs);
@@ -43,7 +46,27 @@ public class PigLatin {
 			output = pigLatinSimple(s);
 		}
 
-		return output.toLowerCase();
+		return output;
+	}
+
+	public static String pigLatinBest (String s) {
+		s = s.toLowerCase();
+		boolean startsWithLetter = inArray(s.substring(0, 1), letters);
+		String output;
+
+		if (!startsWithLetter) {
+			output = s;
+		} else {
+			boolean endsWithLetter = inArray(s.substring(s.length() - 1, s.length()), letters);
+
+			if (endsWithLetter) {
+				output = pigLatin(s);
+			} else {
+				output = pigLatin(s.substring(0, s.length())) + s.charAt(s.length() - 1);
+			}
+		}
+
+		return output;
 	}
 
 }
