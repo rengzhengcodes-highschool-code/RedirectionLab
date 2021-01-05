@@ -7,6 +7,8 @@ public class PigLatinTester extends PigLatin {
 		System.out.println(pigLatinSimple("aaron"));
 		System.out.println(pigLatinSimple("a"));
 		System.out.println(pigLatinSimple("t"));
+		System.out.println(pigLatinSimple("A"));
+		System.out.println(pigLatinSimple("T"));
 
 		System.out.println();
 
@@ -17,6 +19,9 @@ public class PigLatinTester extends PigLatin {
 		System.out.println(pigLatin("grade"));
 		System.out.println(pigLatin("a"));
 		System.out.println(pigLatin("t"));
+		System.out.println(pigLatin("A"));
+		System.out.println(pigLatin("T"));
+
 
 		System.out.println();
 
@@ -28,6 +33,10 @@ public class PigLatinTester extends PigLatin {
 		System.out.println(pigLatinBest("cat!"));
 		System.out.println(pigLatinBest("amazing?"));
 		System.out.println(pigLatinBest("apple%"));
+		System.out.println(pigLatinBest("a"));
+		System.out.println(pigLatinBest("t"));
+		System.out.println(pigLatinBest("A"));
+		System.out.println(pigLatinBest("T"));
 	}
 
 }
