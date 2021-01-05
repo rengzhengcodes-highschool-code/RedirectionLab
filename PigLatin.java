@@ -8,6 +8,7 @@ public class PigLatin {
 		String print = "";
 
 		while (input.hasNextLine()) {
+			print = "";
 			Scanner line = new Scanner(input.nextLine());
 
 			while(line.hasNext()) {
@@ -19,7 +20,7 @@ public class PigLatin {
 			}
 
 			if (input.hasNextLine()) {
-				print += "\n";
+				System.out.println(print);
 			}
 		}
 

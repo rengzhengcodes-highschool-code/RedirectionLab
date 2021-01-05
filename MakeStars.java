@@ -7,6 +7,7 @@ public class MakeStars {
 		String print = "";
 
 		while (input.hasNextLine()) {
+			print = "";
 			Scanner line = new Scanner(input.nextLine());
 
 			while(line.hasNext()) {
@@ -21,7 +22,7 @@ public class MakeStars {
 			}
 
 			if (input.hasNextLine()) {
-				print += "\n";
+				System.out.println(print);
 			}
 		}
 
